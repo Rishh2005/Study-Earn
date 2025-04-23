@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 271 81% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 273 100% 98%;
+    --secondary-foreground: 271 81% 56%;
+
+    --muted: 273 30% 95%;
+    --muted-foreground: 271 10% 45%;
+
+    --accent: 273 100% 98%;
+    --accent-foreground: 271 81% 56%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 273 30% 90%;
+    --input: 273 30% 90%;
+    --ring: 271 81% 56%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 271 81% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 273 100% 4%;
+    --secondary-foreground: 271 81% 56%;
+
+    --muted: 273 30% 15%;
+    --muted-foreground: 271 10% 75%;
+
+    --accent: 273 100% 4%;
+    --accent-foreground: 271 81% 56%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 273 30% 20%;
+    --input: 273 30% 20%;
+    --ring: 271 81% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
